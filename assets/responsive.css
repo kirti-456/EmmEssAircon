@@ -1,0 +1,272 @@
+/* ------------------------------------------------------------------
+   RESPONSIVE LAYOUT EXTENSIONS
+   ------------------------------------------------------------------ */
+
+/* ----------  Laptops / large tablets  (≥992 px <1200 px) ---------- */
+@media (max-width: 1199px) {
+
+    /* HERO  */
+    .hero-section          { height: 75vh; }
+    .hero-text h1          { font-size: 3rem; }
+    .hero-text p           { font-size: 1.1rem; }
+  
+    /* FLOWCHART */
+    .flowchart-box         { padding: 18px; }
+    .flowchart-box h5      { font-size: 0.95rem; }
+  
+    /* TESTING / AWARDS lists */
+    .testing-section ul li,
+    .awards-section ul li  { font-size: 1.2rem; }
+  
+    /* NAVBAR – tighten horizontal spacing */
+    .nav-links ul          { gap: 20px; }
+    .nav-links ul li a     { font-size: 15px; }
+  }
+  
+  /* ----------  Medium tablets / small laptops  (≥768 px <992 px) ---- */
+  @media (max-width: 991px) {
+  
+    /* NAVBAR  ── turn links into a wrapped row */
+    .nav-links ul          { flex-wrap: wrap; gap: 16px 24px; }
+    .navbar                { padding: 12px 20px; }
+  
+    /* HERO */
+    .hero-section          { height: 65vh; }
+    .hero-text h1          { font-size: 2.4rem; }
+    .hero-text p           { font-size: 1rem; }
+  
+    /* INFO & SECTION HEADERS */
+    .info-section h3,
+    .section-title         { font-size: 2.2rem; }
+  
+    /* MANUFACTURING: split to vertical stacking */
+    .manufacturing-container { flex-direction: column; gap: 32px; }
+    .map-side, .table-side   { flex: 1 1 100%; }
+  
+    /* FACILITY TABLE – make columns fluid */
+    .facility-table       { grid-template-columns: repeat(2, 1fr); font-size: 0.9rem; }
+  
+    /* QA GRID (if added) – shrink boxes */
+    .long-rectangle       { width: 160px; height: 380px; }
+    .square-box           { width: 160px; height: 180px; }
+  }
+  
+  /* ----------  Large phones / portrait tablets  (≥576 px <768 px) -- */
+  @media (max-width: 767px) {
+  
+    /* NAVBAR  ── stack logo over links */
+    .navbar               { flex-direction: column; align-items: flex-start; }
+    .nav-links ul         { width: 100%; justify-content: space-between; gap: 12px; margin-top: 8px; }
+  
+    /* HERO */
+    .hero-section         { height: 55vh; }
+    .hero-text h1         { font-size: 1.9rem; }
+    .hero-text p          { font-size: 0.95rem; }
+  
+    /* SECTION PADDING */
+    .info-section,
+    .flowchart-section,
+    .awards-section,
+    .testing-section,
+    .manufacturing-section { padding: 40px 16px; }
+  
+    /* FLOWCHART – shrink timeline line & boxes */
+    .flowchart-timeline   { border-left-width: 3px; margin-left: 20px; padding-left: 24px; }
+    .flowchart-dot        { width: 18px; height: 18px; left: -32px; }
+    .flowchart-box        { padding: 16px; }
+  
+    /* FACILITY TABLE → single column cards */
+    .facility-table       { display: block; }
+    .facility-table .table-row.header { display: none; }   /* hide header row */
+    .facility-table .table-row        { display: grid; grid-template-columns: 35% 65%; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 6px; }
+    .facility-table .table-row > div  { padding: 10px; border: none; text-align: left; font-size: 0.95rem; }
+    .facility-table .table-row > div:first-child { font-weight: 600; }
+  
+    /* TESTING & AWARDS LIST SIZE */
+    .testing-section ul li,
+    .awards-section ul li  { font-size: 1.05rem; }
+  }
+  
+  /* ----------  Small phones  (<576 px)  -------------------------------- */
+  @media (max-width: 575px) {
+  
+    /* GLOBAL FONT SCALE DOWN */
+    body                  { font-size: 14px; }
+  
+    /* NAV LINKS – vertical list with divider */
+    .nav-links ul         { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .nav-links ul li a    { padding: 2px 0; }
+  
+    /* HERO */
+    .hero-section         { height: 45vh; }
+    .hero-text h1         { font-size: 1.6rem; }
+    .hero-text p          { font-size: 0.85rem; }
+  
+    /* QA GRID fallback (if present) */
+    .qa-grid              { flex-direction: column; align-items: center; }
+    .long-rectangle,
+    .square-box           { width: 90%; max-width: 320px; height: auto; }
+  
+    /* FLOWCHART — less spacing between steps */
+    .flowchart-step       { margin-bottom: 38px; }
+  
+    /* TESTING & AWARDS LIST */
+    .testing-section ul,
+    .awards-section ul    { padding-left: 20px; }
+  
+    /* FOOTER – columns stack */
+    .footer .container    { flex-direction: column; align-items: center; text-align: center; }
+    .footer .column       { margin: 4px 0 12px; }
+  
+    /* FACILITY TABLE cards */
+    .facility-table .table-row { grid-template-columns: 1fr 1fr; }
+    .facility-table .table-row > div:first-child { font-weight: 700; }
+  }
+  
+
+  /* ========== Global Layout Adjustments ========== */
+@media screen and (max-width: 1200px) {
+  .rectangle,
+  .rectan,
+  .long-rect,
+  .l-rectangle,
+  .long-rectangle {
+    width: 100%;
+    height: auto;
+  }
+
+  .sq-box,
+  .square,
+  .square-box,
+  .rect {
+    width: 100%;
+    height: auto;
+  }
+
+  .stacked-sq,
+  .stacked-square,
+  .stacked-squares {
+    width: 100%;
+  }
+
+  .pb-grid,
+  .bm-grid,
+  .b-grid,
+  .post-grid,
+  .qa-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ========== Tablets (768px - 1024px) ========== */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-links ul li a {
+    font-size: 15px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .contact-info h4 {
+    margin-left: 0;
+  }
+
+  .footer .column {
+    margin: 20px 0;
+  }
+}
+
+/* ========== Phones (below 768px) ========== */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+
+  .nav-links ul {
+    gap: 12px;
+  }
+
+  .pb-section,
+  .bm-section,
+  .b-section,
+  .post-section,
+  .qa-section {
+    padding: 30px 10px;
+  }
+
+  .footer {
+    font-size: 0.85em;
+  }
+
+  .footer .column p,
+  .footer .column a {
+    font-size: 1em;
+  }
+
+  .rectangle,
+  .rectan,
+  .long-rect,
+  .l-rectangle,
+  .long-rectangle {
+    width: 95%;
+    height: auto;
+  }
+
+  .sq-box,
+  .square,
+  .square-box,
+  .rect {
+    width: 95%;
+    height: auto;
+  }
+
+  .stacked-sq,
+  .stacked-square,
+  .stacked-squares {
+    width: 100%;
+  }
+
+  .qa-grid,
+  .post-grid,
+  .b-grid,
+  .bm-grid,
+  .pb-grid {
+    gap: 15px;
+  }
+
+  .footer .container {
+    padding: 10px;
+  }
+
+  .footer .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer .social-icons a {
+    margin: 5px;
+  }
+}

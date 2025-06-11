@@ -125,20 +125,15 @@ body {
     text-align: justify;
   }
   
-  .info-section h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
   .info-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 0px;
   }
-  .info-section p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #5c5959;
-  }
+
 
   .flowchart-section {
     background: #ffffff;
